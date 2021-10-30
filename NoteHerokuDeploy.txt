@@ -11,4 +11,11 @@ DATABASES['default'].update(prod_db)
 terminal: pip freeze > requirements.txt
 
 heroku login 
-heroku create Name
+heroku creaheroku git:remote -a (herokuName)
+git remote rename <old> <new>
+
+git push heroku main
+
+
+
+
