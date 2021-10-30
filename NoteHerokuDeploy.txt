@@ -1,0 +1,14 @@
+create procfile with web: gunicorn yourdjangoweb.wsgi --log-file -
+        runtime.txt : python-(version)
+pip install : django gunicorn
+            dj-database_url
+            psycopg2
+            whitenoise -> settings
+import dj_database_url 
+prod_db  =  dj_database_url.config(conn_max_age=500)
+DATABASES['default'].update(prod_db)
+
+terminal: pip freeze > requirements.txt
+
+heroku login 
+heroku create Name
